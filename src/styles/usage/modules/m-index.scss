@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@import "./common";
+@import "../libs/swiper.scss";
+.m-index {
+    @include flexbox();
+    @include flex-direction(column);
+    height: 100%;
+    header {
+        height: .53rem;
+        background: $base-color;
+        ul {
+            @include flexbox();
+            height: 100%;
+            li:first-child,
+            li:last-child {
+                width: .53rem;
+                height: 100%;
+                line-height: .53rem;
+                text-align: center;
+                img{
+                    width:.22rem;
+                    height: .22rem;
+                }
+               
+            }
+            li:nth-child(2) {
+                @include flex();
+                @include flexbox();
+                @include justify-content();
+                @include align-items();
+                img{
+                    width:1.04rem;
+                    height: .25rem;
+                }
+                
+            }
+
+        }
+    }
+    nav {
+       
+    }
+    section {
+        overflow-y: scroll;
+        background: #fff;
+        @include flex();
+        width: 100%;
+        
+    }
+    footer {
+        height: .6rem;
+        background: #fff;
+        ul {
+            @include flexbox();
+            @include border(1px 0 0 0, #ced6d0) li {
+                @include flex();
+                &.active b,
+                &.active i {
+                    color: $base-color;
+                }
+                b,
+                i {
+                    display: block;
+                    text-align: center;
+                    color: #e6e6e6;
+                }
+                b {
+                    font-size: .2rem;
+                    line-height: .25rem;
+                }
+                i {
+                    font-size: .24rem;
+                    height: .25rem;
+                    line-height: .25rem;
+                    margin-top:.1rem;
+                }
+                
+            }
+        }
+    }
+    > * {
+        width: 100%;
+    }
+}

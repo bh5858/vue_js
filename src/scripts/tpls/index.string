@@ -1,0 +1,40 @@
+<div class="m-index" id="m-index"> 
+  <header>
+    <ul>
+      <li class=""><img src="./images/ic_activity.png"  ></li>
+      <li>
+        <img src="./images/pic_nav_logo_white.png"  >
+      </li>
+      <li><img src="./images/ic_nav_search_white.png"  ></li>
+    </ul>
+  </header>
+  <nav>
+    
+  </nav>
+  <section>
+     
+        
+  </section>
+  <footer>
+      <ul>
+        <li class="active">
+          <i class="yo-ico">&#xe609;</i>
+          <b>要闻</b>
+        </li>
+        <li>
+          <i class="yo-ico">&#xe63f;</i>
+          <b>视频</b>
+        </li>
+        <li>
+          <i class="yo-ico">&#xe62b;</i>
+          <b>报纸</b>
+        </li>
+        <li>
+          <i class="yo-ico">&#xe66e;</i>
+          <b>我</b>
+        </li>
+        
+        
+      </ul>
+  </footer>
+</div>
