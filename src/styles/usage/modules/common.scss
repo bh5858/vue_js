@@ -9,3 +9,20 @@ $base-color:#a70e09;
 }
 
 
+@font-face {font-family: "yofont";
+  src: url('/fonts/iconfont-details.eot?t=1483666598051'); /* IE9*/
+  src: url('/fonts/iconfont-details.eot?t=1483666598051#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/iconfont-details.woff?t=1483666598051') format('woff'), /* chrome, firefox */
+  url('/fonts/iconfont-details.ttf?t=1483666598051') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('/fonts/iconfont-details.svg?t=1483666598051#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+
+@font-face {font-family: "yofont";
+  src: url('/fonts/iconfont-share.eot?t=1483674170879'); /* IE9*/
+  src: url('/fonts/iconfont-share.eot?t=1483674170879#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/iconfont-share.woff?t=1483674170879') format('woff'), /* chrome, firefox */
+  url('/fonts/iconfont-share.ttf?t=1483674170879') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('/fonts/iconfont-share.svg?t=1483674170879#iconfont') format('svg'); /* iOS 4.1- */
+}

@@ -1,23 +1,12 @@
-var vue = require('../lib/vue.js');
+// var vue = require('../lib/vue.js');
 
-var swiper = require('../lib/swiper.js')
-
-new vue({
+// var swiper = require('../lib/swiper.js')
+var common = require('../utils/util.com.js');
+new Vue({
 	el: '#m-index', //渲染根节点 写死的
 	data: {
 		swiper: null,
 		navIndex: 0,
-		nav: [{
-			title: '足球现场',
-			isActive: true,
-		}, {
-			title: '足球生活',
-			isActive: false
-		}, {
-			title: '足球美女',
-			isActive: false
-		}],
-
 		list: []
 	},
 
@@ -33,12 +22,18 @@ new vue({
 			.then(res => {
 				var that = this;
 				that.list = res;
+
 				that.swiper = new Swiper('#index-swiper', {
-					loop: false,
+					loop: true,
 					onSlideChangeStart: function(swiper) {
 						that.navIndex = swiper.activeIndex;
 					}
 				});
+
+				setTimeout(function() {
+					common.scroll(that);
+				}, 1000);
+
 			})
 			.catch(e => console.log("Oops, error", e));
 

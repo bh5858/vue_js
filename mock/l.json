@@ -1,0 +1,57 @@
+ [{
+ 	"title": "推荐",
+ 	"banImgSrc": "/images/bank.jpg",
+ 	"banTitle": "央行新规：现金交易五万上报 支付宝等机构被监管",
+ 	"banType": "金融",
+ 	"banShare": "8",
+ 	"banTime": "刚刚",
+ 	"lists": [{
+ 		"listImgSrc": "/images/timg.jpg",
+ 		"listTitle": "京津冀将遭受跨年雾霾",
+ 		"listPre": "环境",
+ 		"listComment": 2,
+ 		"listShare": 8,
+ 		"listTime": "刚刚"
+ 	}, {
+ 		"listImgSrc": "/images/wechat.jpg",
+ 		"listTitle": "朋友圈投票,你都不看内容直接投票的啊",
+ 		"listPre": "互联网",
+ 		"listComment": 64,
+ 		"listShare": 14,
+ 		"listTime": "1小时前"
+ 	}, {
+ 		"listImgSrc": "/images/oldman.jpg",
+ 		"listTitle": "老人该有多孤单：想找一位“女儿”去三亚旅游",
+ 		"listPre": "生活",
+ 		"listComment": 32,
+ 		"listShare": 18,
+ 		"listTime": "2小时前"
+ 	}, {
+ 		"listImgSrc": "/images/shi.jpg",
+ 		"listTitle": "京津冀将遭受跨年雾霾",
+ 		"listPre": "文化",
+ 		"listComment": 14,
+ 		"listShare": 30,
+ 		"listTime": "3小时前"
+ 	}]
+
+
+ }, {
+ 	"title": "重磅"
+
+ }, {
+ 	"title": "时局"
+
+ }, {
+ 	"title": "社会"
+
+ }, {
+ 	"title": "经济"
+
+ }, {
+ 	"title": "茶座"
+
+ }, {
+ 	"title": "文化"
+
+ }]

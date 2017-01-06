@@ -1,0 +1,219 @@
+@charset "UTF-8";
+@import "./common";
+
+#app{
+	height:100%;
+	a{
+		color:black;
+	}
+	.m-details{
+		width:100%;
+		height: 100%;
+		@include flexbox();
+		@include flex-direction(column);
+		@include box-sizing();
+		background-color: #fff;
+		
+
+		article{
+			height: 100%;
+			// @include flexbox();
+			@include flex();
+			width:100%;
+			padding:0 .14rem 0 .14rem;
+			overflow-y: scroll;
+			
+			// @include flex-direction(column);
+
+			.d-header{
+				width:100%;
+				
+				
+				@include flexbox();
+				@include flex-direction(column);
+				 hgroup{
+				 	margin: .2rem 0 .1rem 0;
+					 h2{
+					 	font-size: .2rem;
+					 	line-height: .3rem;
+					 }
+				 }
+
+				 .d-title{
+				 	@include flexbox();
+					@include flex-direction(column);
+					height: .37rem;
+					background: url(/images/bg.gif) no-repeat left center;
+					
+					padding-left: .1rem;
+					display: block;
+
+					// @include align-items();
+					li{
+						@include flexbox();
+						@include justify-content(flex-start);
+						color:#e1e1e1;
+						
+						font-size: .1rem;
+						span{
+							padding:0 .03rem;
+						}
+
+					}
+
+				 }
+
+				 figure{
+				 	margin:.1rem 0 .1rem 0;
+				 	img{
+				 		height: 2.31rem;
+				 		width:100%;
+				 	}
+
+				 	figcaption{
+				 		color:#cecece;
+				 		font-size: .1rem;
+				 		line-height:.175rem;
+				 		margin:.12rem 0;
+				 	}
+				 }
+			}
+
+			.d-details{
+				font-size: .15rem;
+				font-weight: bold;
+				line-height: .25rem;
+				p{
+					text-indent: .3rem;
+				}
+
+				.author{
+					margin:.35rem 0;
+					text-align: left;
+					span{
+						color:#8a8a8a;
+						font-size: .12rem;
+						line-height: .35rem;
+						
+						
+					}
+				}
+
+				.label{
+					margin:.1rem 0;
+					span{
+						font-size: .12rem;
+						color:#8a8a8a;
+						
+						border-radius:.06rem;
+						background-color:#ecebe9;
+						margin-right:.15rem;
+						padding:.05rem;
+
+					}
+				}
+				.read{
+					@include border(1px 0 0 0,#e6e6e6,solid,null);
+					mark{
+						display: block;
+						margin:.1rem 0;
+						background: url(/images/bg-d.jpg) no-repeat .7rem center;
+						padding:.1rem .1rem .1rem 0;
+
+
+					}
+					dl{
+                    @include flexbox();
+                    @include justify-content(space-around);
+                    @include box-sizing(border-sizing);
+                   // @include align-items();
+                   
+                    height: .975rem;
+                    width:100%;
+                    margin-bottom: .35rem;
+                    @include border(0 0 1px 0,#e9e9e9);
+                    dt{
+                        width: 1.05rem;
+                        height: .75rem;
+                        img{
+                            height: 100%;
+                            width:100%;
+                        }
+
+                    }
+                    dd{
+                        width: 2.4rem;
+                        height: .75rem;
+                        @include flexbox();
+                        @include flex-direction(column);
+                       	margin-left:.15rem;
+
+                        p{
+                            font-size: .15rem;
+                            font-weight: bold;
+                            height:.3rem;
+                            line-height: .15rem;
+                            @include ellipsis(100%,1);
+                            color:black;
+                            text-indent: 0;
+                            
+                        }
+
+                        span{
+                        	  @include ellipsis(100%,2);
+                        	  font-size: .12rem;
+                        	  font-weight: normal;
+
+                        }
+                    }
+
+                }
+				}
+			}
+		}
+
+
+
+
+
+		footer{
+			height: .48rem;
+			width:100%;
+			padding:0 .14rem;
+			@include border(1px 0 0 0,#e6e6e6,solid,null)
+			ul{
+				height: 100%;
+				@include flexbox();
+				@include justify-content(space-between);
+				padding:0 .14rem;
+				@include align-items();
+				i{
+					font-size: .2rem;
+					position: relative;
+					display: block;
+				}
+				li:first-child{
+					@include flex();
+					i{
+						font-weight:bold;
+					}
+				}
+				
+				li:last-child{
+					@include flexbox();
+					i{
+						padding:0 .12rem;
+						span{
+							position:absolute;
+							right:-.03rem;
+							top:-.03rem;
+							font-size: .08rem;
+						}
+					}
+					
+				}
+
+			}
+		}
+	}
+}

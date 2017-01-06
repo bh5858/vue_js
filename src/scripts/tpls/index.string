@@ -1,4 +1,4 @@
-<div class="m-index" id="m-index"> 
+<div class="m-index" id="m-index">
   <header>
     <ul>
       <li class=""><img src="./images/ic_activity.png"  ></li>
@@ -9,32 +9,92 @@
     </ul>
   </header>
   <nav>
-    
+    <ul>
+      <li  v-on:click="changeT(index)" v-for="(item,index) in list" :class="{active:index==navIndex}" >{{item.title}}</li>
+    </ul>
+    <i class="yo-ico">&#xe62a;</i>
   </nav>
   <section>
-     
+    
+    <div class="swiper-container" id="index-swiper">
+      <div class="swiper-wrapper">
+        <div id="index-scroll" class="swiper-slide" v-for="(item,index) in list"  >
+          <div class="scroll-container">
+            <div class="head hide">
+              <img src="/images/arrow.png" width="40" height="40"/>
+              <span>下拉刷新...</span>
+            </div>
+           <div>
+            <div class="banner">
+              <img :src="item.banImgSrc">
+              <p>{{item.banTitle}}</p>
+              <div>
+                <span>{{item.banType}}</span>
+                <ul>
+                  <li class="yo-ico">&#xe604;{{item.banShare}}</li>
+                </ul>
+                
+                <span>{{item.banTime}}</span>
+              </div>
+            </div>
+            <dl v-for="(lists,index) in item.lists">
+              <dt>
+              <img :src="lists.listImgSrc">
+              </dt>
+              <dd>
+              <p>{{lists.listTitle}}</p>
+              <ul>
+                
+                <li>
+                  <span>{{lists.listPre}}</span>
+                  <span class="yo-ico">&#xe63e;{{lists.listComment}}</span>
+                  <span class="yo-ico">&#xe604;{{lists.listShare}}</span>
+                  
+                </li>
+                <li>
+                  <span>{{lists.listTime}}</span>
+                </li>
+              </ul>
+              </dd>
+            </dl>
+            </div>
+            <div class="foot hide">
+              <img src="/images/arrow.png" width="40" height="40"/>
+              <span>上拉加载更多...</span>
+            </div>
+          </div>
+          
+          
+        </div>
         
+        
+      </div>
+    </div>
+    
+    
+    
+    
   </section>
   <footer>
-      <ul>
-        <li class="active">
-          <i class="yo-ico">&#xe609;</i>
-          <b>要闻</b>
-        </li>
-        <li>
-          <i class="yo-ico">&#xe63f;</i>
-          <b>视频</b>
-        </li>
-        <li>
-          <i class="yo-ico">&#xe62b;</i>
-          <b>报纸</b>
-        </li>
-        <li>
-          <i class="yo-ico">&#xe66e;</i>
-          <b>我</b>
-        </li>
-        
-        
-      </ul>
+    <ul>
+      <li class="active">
+        <i class="yo-ico">&#xe609;</i>
+        <b>要闻</b>
+      </li>
+      <li>
+        <i class="yo-ico">&#xe63f;</i>
+        <b>视频</b>
+      </li>
+      <li>
+        <i class="yo-ico">&#xe62b;</i>
+        <b>报纸</b>
+      </li>
+      <li>
+        <i class="yo-ico">&#xe66e;</i>
+        <b>我</b>
+      </li>
+      
+      
+    </ul>
   </footer>
 </div>

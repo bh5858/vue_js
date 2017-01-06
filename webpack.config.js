@@ -31,8 +31,21 @@ module.exports = {
 			}, {
 				test: /\.string$/,
 				loader: 'string'
+			}, {
+				test: /\.vue$/,
+				loader: 'vue'
 			}
 		]
+	},
+	vue: {
+		loaders: {
+			js: 'babel'
+		}
+	},
+	resolve: {
+		alias: {
+			vue: 'vue/dist/vue.js'
+		}
 	},
 
 	devServer: { //手动将webpack服务端口设置成80，默认为8080
