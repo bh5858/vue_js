@@ -1,0 +1,14 @@
+@import "./common";
+.m-search {
+  @include flex();
+  width: 100%;
+  @extend %header;
+  header {
+    li:nth-child(2) {
+      color: #fff;
+    }
+    a {
+      color: #fff;
+    }
+  }
+}

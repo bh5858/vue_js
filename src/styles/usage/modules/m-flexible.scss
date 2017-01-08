@@ -1,0 +1,36 @@
+@import "./common";
+.m-flexible{
+    background:#f8f8f8;
+    width: 100%;
+    height:100%;
+    @extend %header;
+    header {
+      li:nth-child(2) {
+        color: #fff;
+      }
+      a {
+        color: #fff;
+      }
+    }
+    section{
+        p{
+            width:100%;
+            img{
+                width:100%;
+            }
+        }
+        ul{
+            width:100%;
+            text-align: center;
+            li:nth-child(1){
+                line-height: .4rem;
+            }
+            li:nth-child(2){
+                text-align: right;
+                font-size:.12rem;
+                color:#CED6D0;
+                padding-right:.2rem;
+            }
+        }
+    }
+}
