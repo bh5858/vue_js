@@ -37,12 +37,12 @@ var common = {
   },
 
   scroll: function(that) {
-    var myScroll = new IScroll('#index-scroll', {
+    var myScroll = new IScroll('#index-scroll0', {
 
 
     });
 
-    var scrollHeight = 35;
+    var scrollHeight = 40;
     $('.head.hide').removeClass('hide');
     $('.foot.hide').removeClass('hide');
     myScroll.scrollBy(0, -scrollHeight);
@@ -71,12 +71,12 @@ var common = {
       } else if (this.y >= 0) {
         head.attr('src', '/images/ajax-loader.gif');
         //TODO ajax下拉刷新数据
-        console.log(111);
+
         setTimeout(function() {
           myScroll.scrollTo(0, -scrollHeight);
           head.removeClass('up');
           head.attr('src', '/images/arrow.png');
-        }, 100);
+        }, 500);
       }
 
       var maxY = this.maxScrollY - this.y;

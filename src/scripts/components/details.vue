@@ -7,61 +7,46 @@
 			
 			
 			<hgroup>
-			<h2>摩拜单车再获2015亿美元融资</h2>
-			<h2>摩拜单车CEO王晓峰：将造更多车，招更多人</h2>
+					<h2 v-for="item in dList.dH2">{{item}}</h2>
+			
 			</hgroup>
 			
 			
 			<ul class="d-title">
 				
-				<li><span>南方周末记者</span> <span>谢鹏</span></li>
-				<li><span>1小时前</span><span>公司</span></li>
+				<li v-for="item in dList.dTitle"><span v-for="t in item.title ">{{t}}</span> </li>
 				
 			</ul>
 			
 			<figure>
-				<img src="/images/img1.png"  />
-				<figcaption>2016年12月27号,在深圳地铁11号线后海站旁,一名男子准备使用一辆摩拜单车.(新华记者毛思倩/图)
+				<img :src="dImgMes.dImg"  />
+				<figcaption>{{dImgMes.dMes}}
 				</figcaption>
 				
 			</figure>
 		</div>
 		<div class="d-details">
-		<p>摩拜单车，英文名mobike，是由胡玮炜创办的北京摩拜科技有限公司研发的互联网短途出行解决方案，是无桩借还车模式的智能硬件。人们通过智能手机就能快速租用和归还一辆摩拜单车，用可负担的价格来完成一次几公里的市内骑行[1]  。2016年4月22日，北京摩拜科技有限公司在上海召开发布会，正式宣布摩拜单车服务登陆申城。以倡导绿色出行的方式给世界地球日“一份礼物”[2]
-		</p>
-		<p>
-			2017年1月4日晚，智能共享单车平台摩拜单车宣布完成新一轮（D轮）2.15亿美元（约合人民币15亿元）的股权融资[3]  。
-		</p>
-		<p>摩拜单车经过专业设计，将全铝车身，防爆轮胎，轴传动等高科技手段集于一体，使其坚固耐用，进而降低维护成本。定制的单车外形在街头有较高的辨识度[6]  。</p>
-		
-		<p>使用摩拜单车智能手机应用，用户可以用自己的手机查看单车位置，继而预约并找到该车。通过扫描车身上的二维码开锁即可开始骑行。到达目的地后, 在街边任意画白线区域内手动锁车完成归还手续[7]  。</p>
-		<p>摩拜单车摒弃了固定的车桩，允许用户将单车随意停放在路边任何有政府画线的停放区域，用户只需将单车合上车锁，即可离去[8]  。车身锁内集成了嵌入式芯片，GPS模块和SIM 卡，便于摩拜监控自行车在路上的具体位置[9]  。
-		车身专为共享单车重新设计的，使用防爆轮胎，无链条的轴传动，全铝不锈车身，整个单车可达到五年高频次使用条件下无需人工维护的标准[10]  。经过设计的单车外观，时尚醒目，方便人们找车的同时，也是城市里一道独特的风景。</p>
-		<p>为了让人人都有单车可骑，摩拜单车定价为半小时1元人民币。鼓励人们回归单车这种低碳的，占地面积小的出行方式，缓解交通压力，保护环境</p>
-		<p>随时随地，在线找车-打开app，即可看到身边的摩拜单车。用车用车(4张)一键扫码，快速开锁-只需用摩拜单车手机应用扫码车头上或车锁上的二维码，车锁就会自动打开。城市白线，便捷还车。停车后手动合上车锁，自动结束计费</p>
-		<p>2016年9月，摩拜单车已经完成超过1亿美元的C轮融资，由高瓴资本、华平投资集团领投，多家机构跟投，包括红杉资本、启明创投和摩拜单车早期投资方</p>
+			<p v-for="item in dList.dDetails">{{item}}</p>
 
 		<div class="author">
-			<span>网络编辑： lee</span>
-			<span>责任编辑： 顾策</span>
+			<span v-for="item in dList.dAuthor">{{item}}</span>
+			
 
 		</div>
 		<h2>标签</h2>
 
 		<div class="label">
-			<span>膜拜</span>
-			<span>融资</span>
-			<span>王晓峰</span>
+			<span v-for="item in dList.dLabel">{{item}}</span>
 		</div>
 		
 		<div class="read">
 			<mark>继续阅读</mark>
 			<dl>
-				<dt> <img src="/images/animal.jpg"> </dt>
+				<dt> <img :src="dRead.dImg"> </dt>
 				<dd>
 					
-					<p>膜拜完成新一轮融资：净投放智能共享单车平台摩拜单车宣布完成新一轮</p>
-					<span>2017年1月4日晚，智能共享单车平台摩拜单车宣布完成新一轮（D轮）2.15亿美元（约合人民币15亿元）的股权融资[3] </span>
+					<p>{{dRead.dTitle}}</p>
+					<span>{{dRead.dDetails}}</span>
 				</dd>
 			</dl>
 		</div>
@@ -91,3 +76,38 @@
 	</footer>
 </div>
 </template>
+
+<script>
+	module.exports={
+		
+			data:function(){
+				
+				return{
+					dList:[],
+					dImgMes:[],
+					dRead:[]
+
+				}	
+			},
+			mounted:function(){
+				fetch("/api/dList").then(res=>res.json()).then(data=>{
+					for(var i in data){
+						if(this.$route.params.id==data[i].id){
+							this.dList=data[i];
+							this.dImgMes=data[i].dImgMes;
+							this.dRead=data[i].dRead;
+						}
+						
+
+					}
+
+					console.log(this.dList)
+				})
+			},
+			methods:{
+				
+			}
+
+		
+	}
+</script>

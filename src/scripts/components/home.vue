@@ -18,7 +18,7 @@
 	<section>
 		<div class="swiper-container" id="index-swiper">
 			<div class="swiper-wrapper">
-				<div id="index-scroll" class="swiper-slide" v-for="(item,index) in list"  >
+				<div :id="'index-scroll'+ index" class="swiper-slide" v-for="(item,index) in list"  >
 					<div class="scroll-container">
 						<div class="head hide">
 							<img src="/images/arrow.png" width="40" height="40"/>
@@ -26,7 +26,9 @@
 						</div>
 						<div class="section-container">
 							<div class="banner">
+								<router-link :to="'/details/' +item.id">
 								<img :src="item.banImgSrc">
+								
 								<p>{{item.banTitle}}</p>
 								<div>
 									<span>{{item.banType}}</span>
@@ -35,6 +37,7 @@
 									</ul>
 									<span>{{item.banTime}}</span>
 								</div>
+								</router-link>
 							</div>
 							<dl   v-for="(lists,index) in item.lists">
 								
@@ -90,16 +93,21 @@ module.exports={
 						var that = this;
 						that.list = res;
 						that.swiper = new Swiper('#index-swiper', {
+							  observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        						observeParents:true,//修改swiper的父元素时，自动初始化swiper
 							loop: true,
 							onSlideChangeStart: function(swiper) {
 								that.navIndex = swiper.activeIndex;
 							}
 						});
-						common.isAllLoaded('#index-scroll .section-container', function () {
+						//common.isAllLoaded('#index-scroll .section-container', function () {
+							setTimeout(function(){
+								common.scroll(that);
+
+							},1000)
 							
-							common.scroll(that);
 					
-						})
+						//})
 					})
 					.catch(e => console.log("Oops, error", e));
 			},
