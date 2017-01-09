@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@import "./common";
+
+.m-video{
+	width:100%;
+	height:100%;
+	@include flex();
+    
+
+
+}

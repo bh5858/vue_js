@@ -30,14 +30,14 @@ const routes = [{
 		path: '/newspaper',
 		component: newspaper
 
-	}, {
-		path: '/my',
-		component: my
-
 	}]
 }, {
 	path: '/details/:id',
 	component: details
+}, {
+	path: '/my',
+	component: my
+
 }]
 const router = new VueRouter({
 	routes // （缩写）相当于 routes: routes

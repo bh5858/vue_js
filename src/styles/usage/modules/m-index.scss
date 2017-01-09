@@ -8,12 +8,7 @@
         @include flexbox();
         @include flex-direction(column);
         height: 100%;
-        .container{
-            @include flex();
-            @include flexbox();
-            @include flex-direction(column);
-            width:100%;
-            header {
+        header {
                 height: .53rem;
                 background: $base-color;
                 ul {
@@ -45,6 +40,12 @@
 
                 }
             }
+        .container{
+            @include flex();
+            @include flexbox();
+            @include flex-direction(column);
+            width:100%;
+            
             nav {
                 height:.4rem;
                 width:100%;
