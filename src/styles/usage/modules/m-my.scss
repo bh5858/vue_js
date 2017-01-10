@@ -1,46 +1,100 @@
 @charset "UTF-8";
 @import "./common";
-
-.m-my{
-	width:100%;
-	height:100%;
-	@include flexbox();
-	@include flex-direction(column);
-	section{
-		@include flex();
-	}
-	
-     footer {
-            height: .6rem;
-            background: #fff;
-            ul {
+.m-my {
+    width: 100%;
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    div {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content();
+        @include align-items();
+        height: 2.1rem;
+        background: #a80d0b;
+        text-align: center;
+        p:nth-child(1) {
+            @include border-radius(50%);
+            width: 0.75rem;
+            height: 0.75rem;
+            background: #f1edda;
+            font-size: 0.4rem;
+            a {
+                color: #fff;
+            }
+        }
+        p:nth-child(2) {
+            display: block;
+            color: #fff;
+            line-height: 0.3rem;
+            font-size: 0.16rem;
+        }
+        p:nth-child(3) {
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: #fff;
+            padding: 0.1rem;
+            font-size: 0.3rem;
+        }
+    }
+    section {
+        @include flex();
+        width: 100%;
+        background: #f8f8f8;
+        ul {
+            background: #ffffff;
+            a {
+                color: #969696;
+            }
+            li {
                 @include flexbox();
-                @include border(1px 0 0 0, #ced6d0) li {
-                    @include flex();
-                    &.active b,
-                    &.active i {
-                        color: $base-color;
-                    }
-                    b,
-                    i {
-                        display: block;
-                        text-align: center;
-                        color: #e6e6e6;
-                    }
-                    b {
-                        font-size: .2rem;
-                        line-height: .25rem;
-                    }
-                    i {
-                        font-size: .24rem;
-                        height: .25rem;
-                        line-height: .25rem;
-                        margin-top:.1rem;
-                    }
-                    
+                @include justify-content(space-between);
+                padding: 0 0.1rem;
+                line-height: 0.44rem;
+                @include border(0 0 1px 0,#969696);
+                font-size: 0.18rem;
+                span {
+                    color: #969696;
+                }
+                p:nth-child(2) span {
+                    padding-left: 0.1rem;
+                }
+                b {
+                    font-weight: normal;
+                    padding-left: 0.1rem;
                 }
             }
         }
-
-
+    }
+    footer {
+        height: 0.6rem;
+        background: #fff;
+        ul {
+            @include flexbox();
+            @include border(1px 0 0 0, #ced6d0) li {
+                @include flex();
+                &.active b,
+                &.active i {
+                    color: $base-color;
+                }
+                b,
+                i {
+                    display: block;
+                    text-align: center;
+                    color: #e6e6e6;
+                }
+                b {
+                    font-size: 0.2rem;
+                    line-height: 0.25rem;
+                }
+                i {
+                    font-size: 0.24rem;
+                    height: 0.25rem;
+                    line-height: 0.25rem;
+                    margin-top: 0.1rem;
+                }
+            }
+        }
+    }
 }

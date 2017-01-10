@@ -27,37 +27,88 @@ $base-color:#a70e09;
   url('/fonts/iconfont-share.svg?t=1483674170879#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-%header{
-   header {
-                height: .53rem;
-                background: $base-color;
-                ul {
-                    @include flexbox();
-                    height: 100%;
-                    li:first-child,
-                    li:last-child {
-                        width: .53rem;
-                        height: 100%;
-                        line-height: .53rem;
-                        text-align: center;
-                        img{
-                            width:.22rem;
-                            height: .22rem;
-                        }
-                       
-                    }
-                    li:nth-child(2) {
-                        @include flex();
-                        @include flexbox();
-                        @include justify-content();
-                        @include align-items();
-                        img{
-                            width:1.04rem;
-                            height: .25rem;
-                        }
-                        
-                    }
+@font-face {font-family: "yofont";
+  src: url('/fonts/login.eot?t=1483243221793'); /* IE9*/
+  src: url('/fonts/login.eot?t=1483243221793#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/login.woff?t=1483243221793') format('woff'), /* chrome, firefox */
+  url('/fonts/login.ttf?t=1483243221793') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('/fonts/login.svg?t=1483243221793#iconfont') format('svg'); /* iOS 4.1- */
+}
 
-                }
-            }
+@font-face {font-family: "yofont";
+  src: url('/fonts/fx.eot?t=1483243221793'); /* IE9*/
+  src: url('/fonts/fx.eot?t=1483243221793#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/fx.woff?t=1483243221793') format('woff'), /* chrome, firefox */
+  url('/fonts/fx.ttf?t=1483243221793') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('/fonts/fx.svg?t=1483243221793#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+
+
+
+
+%header {
+  header {
+    height: .6rem;
+    background: #a80d0b;
+    ul {
+      @include flexbox();
+      height: 100%;
+      li:first-child{
+        height: 100%;
+        line-height: .6rem;
+        font-size:.2rem;
+        text-align: center;
+        color: #ffffff;
+        padding-left:.1rem;
+      }
+      li:last-child {
+        height: 100%;
+        line-height: .6rem;
+        font-size:.14rem;
+        text-align: center;
+        color: #ffffff;
+        padding-right:.1rem;
+      }
+      li:nth-child(2) {
+        @include flex();
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        span {
+          display: inline-block;
+          width: .59rem;
+          height: .25rem;
+          text-align: center;
+          line-height: .25rem;
+          color: rgba(255, 255, 255, 0.6);
+          background: rgba(100, 217, 133, 0.6);
+          &:first-child {
+            border-radius: .1rem 0 0 .1rem;
+          }
+          &:last-child {
+            border-radius: 0 .1rem .1rem 0;
+          }
+          &.active {
+            background: #64d985;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+%section{
+    section{
+        @include flex();
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        width:100%;
+        p{
+            color:#6b6b6b;
+        }
+    }
 }

@@ -1,7 +1,6 @@
 {
   "name": "vuejs",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,5 +29,39 @@
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
     "zepto": "^1.2.0"
-  }
+  },
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "de-indent": "^1.0.2",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "he": "^1.1.0",
+    "iscroll": "^5.2.0",
+    "jquery": "^3.1.1",
+    "node-sass": "^4.1.1",
+    "sass-loader": "^4.1.1",
+    "string-loader": "^0.0.1",
+    "style-loader": "^0.13.1",
+    "swiper": "^3.4.1",
+    "vue": "^2.1.8",
+    "vue-loader": "^10.0.2",
+    "vue-router": "^2.1.1",
+    "vue-devtools": "^2.3.1-beta1",
+    "vue-html-loader": "^1.2.3",
+    "vue-template-compiler": "^2.1.8",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
+    "zepto": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bh5858/vue_js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bh5858/vue_js/issues"
+  },
+  "homepage": "https://github.com/bh5858/vue_js#readme",
+  "description": ""
 }

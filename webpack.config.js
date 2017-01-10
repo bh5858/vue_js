@@ -50,11 +50,11 @@ module.exports = {
 
 	devServer: { //手动将webpack服务端口设置成80，默认为8080
 		contentBase: __dirname + '/prd', //服务在当前目录下启动
-		port: 80,
+		port: 7080,
 		host: 'localhost',
 		proxy: { //代理
 			'/api': { //在地址栏输入localhost/api 默认转到下面定义好的target的地址中
-				target: 'http://localhost:9000',
+				target: 'http://localhost:2000',
 				pathRewrite: {
 					'^/api': '' //替换成空字符串
 				}

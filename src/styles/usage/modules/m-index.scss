@@ -8,8 +8,39 @@
         @include flexbox();
         @include flex-direction(column);
         height: 100%;
-         @extend %header;
-       
+        header {
+                height: .53rem;
+                background: $base-color;
+                ul {
+                    @include flexbox();
+                    height: 100%;
+                    li:first-child,
+                    li:last-child {
+                        width: .53rem;
+                        height: 100%;
+                        line-height: .53rem;
+                        text-align: center;
+                        img{
+                            width:.22rem;
+                            height: .22rem;
+                        }
+                       
+                    }
+                    li:nth-child(2) {
+                        @include flex();
+                        @include flexbox();
+                        @include justify-content();
+                        @include align-items();
+                        img{
+                            width:1.04rem;
+                            height: .25rem;
+                        }
+                        
+                    }
+
+                }
+        }
+
         .container{
             @include flex();
             @include flexbox();
