@@ -1,6 +1,6 @@
 <template>
 	<div class="m-newspaper">
-		<!-- <header>
+		<header>
 		<ul>
 			<li class=""><img src="/images/ic_activity.png"  ></li>
 			<li>
@@ -8,7 +8,7 @@
 			</li>
 			<li><img src="/images/ic_nav_search_white.png"  ></li>
 		</ul>
-	</header> -->
+	</header>
 
 	newspaper
 	</div>
