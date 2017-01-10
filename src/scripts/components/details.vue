@@ -101,7 +101,7 @@
 
 					}
 
-					console.log(this.dList)
+					
 				})
 			},
 			methods:{

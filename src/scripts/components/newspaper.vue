@@ -9,7 +9,9 @@
 			<li><img src="/images/ic_nav_search_white.png"  ></li>
 		</ul>
 	</header>
-
-	newspaper
+	<section>
+		<img src="/images/newspaper.jpg">
+	</section>
+	
 	</div>
 </template>
